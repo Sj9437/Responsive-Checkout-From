@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout Card</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.js"></script>
+    <!-- style css -->
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <h2>Checkout your Form</h2>
+<div class="row">
+    <div class="col-75">
+        <div class="container">
+                <div class="row">
+                    <div class="col-50">
+                        <h3>Flight Infrormation</h3>
+                        <label for="fname"><i class="fa fa-user"></i> Flight Name</label>
+                        <input type="text" id="fname" name="fullname" placeholder="Enter your name" required>
+                        <label for="code"><i class="fa fa-code"></i> Flight Code</label>
+                        <input type="text" id="number" name="code" placeholder="Enter your code" required>
+                        <label for="no."><i class="fa fa-number"></i>Flight No.</label>
+                        <input type="text" id="no." name="number" placeholder="Enter your number" required>
+                        <label for="date"><i class="fa fa-date"></i>Boarding date</label>
+                        <input type="text" id="date" name="date" placeholder="enter your date" required>
+                        <div class="row">
+                            <div class="col-50">
+                                <label for="state">Source</label>
+                                <input type="text" id="source" name="source" placeholder="Enter your source"required>
+                            </div>
+                            <div class="col-50">
+                                <label for="destination">Destination</label>
+                                <input type="text" id="destination" name="destination" placeholder="enter your destination"required>
+                            </div>
+                        </div>
+                    <div class="row">
+                            <div class="col-50">
+                                <label for="time">Arrival time</label>
+                                <input type="text" id="source" name="time" placeholder="Enter your time"required>
+                            </div>
+                            <div class="col-50">
+                                <label for="time">Departure time</label>
+                                <input type="text" id="time" name="time" placeholder="enter your time"required>
+                            </div>
+                            <div class="col-50">
+                                <label for="time">Reaching time</label>
+                                <input type="text" id="time" name="time" placeholder="enter your time"required>
+                            </div>
+                        </div>
+        
+                    <div class="col-50">
+                        <h3>Seat Infrormation</h3>
+                        </div>
+                        <label for="cname">Seat class</label>
+                        <input type="text" id="cname" name="cardname" placeholder="enter your seat class"required>
+                        <label for="cinfo">Seat Information</label>
+                        <input type="text" id="cinfo" name="cardinformation" placeholder="enter your seat info"required>
+                    </div>
+                </div>
+               
+            </form>
+        </div>
+    </div>
+    <div class="col-25">
+        <div class="container">
+            <h4>Total Payment</h4>
+            <label for="cname">Seat </label>
+                        <input type="text" id="cname" name="cardname">
+                        <label for="cinfo">GST</label>
+                        <input type="text" id="cinfo" name="cardinformation">
+                        <label for="cname">Total</label>
+                        <input type="text" id="cname" name="cardname">
+                         <label>
+                <input type="submit" value="Pay Now" class="btn">
+            </label>
+                    
+        </div>
+    </div>
+</div>
+<!-- script validate js -->
+<script>
+    $('#validate').validate({
+        roles: {
+            fullname: {
+                required: true,
+            },
+            email: {
+                required: true,
+            },
+            address: {
+                required: true,
+            },
+            city: {
+                required: true,
+            },
+            state: {
+                required: true,
+            },
+            zip: {
+                required: true,
+            },
+            cardname: {
+                required: true,
+            },
+            cardnumber: {
+                required: true,
+            },
+            expmonth: {
+                required: true,
+            },
+            expyear: {
+                required: true,
+            },
+            cvv: {
+                required: true,
+            },
+           
+        },
+        messages: {
+            fullname:"Please input full name*",
+            email:"Please input email*",
+            city:"Please input city*",
+            address:"Please input address*",
+            state:"Please input state*",
+            zip:"Please input address*",
+            cardname:"Please input card name*",
+            cardnumber:"Please input card number*",
+            expmonth:"Please input exp month*",
+            expyear:"Please input exp year*",
+            cvv:"Please input cvv*",
+        },
+    });
+</script>
+</body>
+</html>
+
